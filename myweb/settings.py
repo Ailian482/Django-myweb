@@ -32,6 +32,7 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
+    'myapp.apps.MyappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -76,6 +77,18 @@ WSGI_APPLICATION = 'myweb.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 # 数据库配置，默认开启sqlite3的数据库信息，会自动在我们当前的项目目录下创建 db.sqlite3 的文件，这个文件随时可以删掉
+# ENGINE 是连接的数据库
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'tmc_services',
+#         'USER': 'root',
+#         'PASSWORD': '',
+#         'HOST': 'tyx-nonproduction-mysql.teyixing.com',
+#         'PORT': '3314',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
